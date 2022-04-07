@@ -32,10 +32,10 @@ class OutputFormat: ObservableObject {
     
     func addValue(newValue: OutputFormat) {
         let factor = CGFloat(15)
-        x1 += (newValue.x1 - x1)/factor
-        x2 += (newValue.x2 - x2)/factor
-        y1 += (newValue.y1 - y1)/factor
-        y2 += (newValue.y2 - y2)/factor
+        x1 = newValue.x1
+        x2 = newValue.x2
+        y1 = newValue.y1
+        y2 = newValue.y2
 
     }
     
@@ -44,12 +44,8 @@ class OutputFormat: ObservableObject {
     }
 }
 
-func analyzeImage(image: UIImage) -> OutputFormat? {
-    guard let buffer = image.resize(size: CGSize(width: 768, height: 576))?.getCVPixelBuffer() else {
-        print("Error during prediction")
-        return nil
-    }
-    
+func analyzeImage(buffer: CVPixelBuffer) -> OutputFormat? {
+
     do {
         let config = MLModelConfiguration()
         let crosswalkVisionModel = try CrosswalkVisionModel(configuration: config)

@@ -25,7 +25,7 @@ struct ContentView: View {
                     .position(x: gp.size.width*sessionManager.output.x2, y: gp.size.height*(sessionManager.output.y2))
             }
         )
-//        Image(uiImage: UIImage(named: "crosswalk6")!.resize(size: CGSize(width: 768, height: 576))!)
+//        Image(uiImage: UIImage(named: "crosswalk")!.resize(size: CGSize(width: 768, height: 576))!)
 //            .resizable()
 //            .scaledToFit()
 //            .overlay(GeometryReader { gp in

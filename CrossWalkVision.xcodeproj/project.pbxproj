@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32DF93811AE1B0FCECCD06CC /* CVBufferResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DF9B4B478E2358BBD43B65 /* CVBufferResize.swift */; };
+		32DF9E67252BD0C1B59FE173 /* CVBufferCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DF933CA8B54C09E4B03B1E /* CVBufferCreate.swift */; };
 		5B7D41A527FDE1BB007BB34C /* CrossWalkVisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D41A427FDE1BB007BB34C /* CrossWalkVisionApp.swift */; };
 		5B7D41A727FDE1BB007BB34C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D41A627FDE1BB007BB34C /* ContentView.swift */; };
 		5B7D41A927FDE1BE007BB34C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7D41A827FDE1BE007BB34C /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32DF933CA8B54C09E4B03B1E /* CVBufferCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVBufferCreate.swift; sourceTree = "<group>"; };
+		32DF9B4B478E2358BBD43B65 /* CVBufferResize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVBufferResize.swift; sourceTree = "<group>"; };
 		5B7D41A127FDE1BB007BB34C /* CrossWalkVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossWalkVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7D41A427FDE1BB007BB34C /* CrossWalkVisionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossWalkVisionApp.swift; sourceTree = "<group>"; };
 		5B7D41A627FDE1BB007BB34C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 				5B7D41AA27FDE1BE007BB34C /* Preview Content */,
 				5B7D41B427FDE269007BB34C /* PredictCrossWalkPosition.swift */,
 				5B7D41B627FDE58A007BB34C /* Extensions.swift */,
+				32DF9B4B478E2358BBD43B65 /* CVBufferResize.swift */,
+				32DF933CA8B54C09E4B03B1E /* CVBufferCreate.swift */,
 			);
 			path = CrossWalkVision;
 			sourceTree = "<group>";
@@ -175,6 +181,8 @@
 				5B7D41B527FDE269007BB34C /* PredictCrossWalkPosition.swift in Sources */,
 				5B7D41A527FDE1BB007BB34C /* CrossWalkVisionApp.swift in Sources */,
 				5B7D41BB27FE2491007BB34C /* SessionManager.swift in Sources */,
+				32DF93811AE1B0FCECCD06CC /* CVBufferResize.swift in Sources */,
+				32DF9E67252BD0C1B59FE173 /* CVBufferCreate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

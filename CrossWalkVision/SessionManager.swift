@@ -8,6 +8,7 @@
 import ARKit
 import Foundation
 import RealityKit
+import CoreVideo
 
 class SessionManager: NSObject, ObservableObject, ARSessionDelegate {
     let arEngine: AREngine
@@ -35,16 +36,19 @@ class SessionManager: NSObject, ObservableObject, ARSessionDelegate {
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         // Image resolution (1920.0, 1440.0)
         
-        if frameCount%rationFrame == 0 {
+        if frameCount % rationFrame == 0 {
             outputQueue = output
             DispatchQueue.global().async {
-                // C'EST SUREMENT ICI QUE CA CHIBRE
-                
-                //let image = UIImage(ciImage: CIImage(cvPixelBuffer: frame.capturedImage))
-                let image = UIImage(pixelBuffer: frame.capturedImage)!
-                //let image = UIImage(named: "crosswalk6")
+
+                // resize pixel buffer
+                let destPixelBuffer : CVPixelBuffer? = createPixelBuffer(width: 768, height: 576)
+
+                guard let resizedPixelBuffer = destPixelBuffer else { return }
+
+                resizePixelBuffer(from: frame.capturedImage, to: resizedPixelBuffer, width: 768, height: 576)
+
                 do {
-                    let prediction = try? analyzeImage(image: image)
+                    let prediction = try? analyzeImage(buffer: resizedPixelBuffer)
                     if prediction != nil {
                         self.outputQueue.addValue(newValue: prediction!)
                     }
