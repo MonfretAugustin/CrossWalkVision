@@ -13,12 +13,13 @@ import CoreVideo
 class SessionManager: NSObject, ObservableObject, ARSessionDelegate {
     let arEngine: AREngine
     // MARK: Published var
-    
+    @Published var image: UIImage?
     @Published var output: OutputFormat
     var outputQueue: OutputFormat
     var rationFrame:Int = 4
     var frameCount:Int = 1
-    
+    let context: CIContext = CIContext(options: nil)
+
     override init() {
         print("Creating AREngine...")
         arEngine = AREngine()
@@ -35,13 +36,17 @@ class SessionManager: NSObject, ObservableObject, ARSessionDelegate {
     
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         // Image resolution (1920.0, 1440.0)
-        
+
+        let ciimage : CIImage = CIImage(cvPixelBuffer: frame.capturedImage)
+        let cgImage:CGImage = context.createCGImage(ciimage, from: ciimage.extent)!
+        image = UIImage(cgImage: cgImage)
+
         if frameCount % rationFrame == 0 {
             outputQueue = output
             DispatchQueue.global().async {
 
                 // resize pixel buffer
-                let destPixelBuffer : CVPixelBuffer? = createPixelBuffer(width: 768, height: 576)
+                let destPixelBuffer: CVPixelBuffer? = createPixelBuffer(width: 768, height: 576)
 
                 guard let resizedPixelBuffer = destPixelBuffer else { return }
 
