@@ -41,7 +41,7 @@ class SessionManager: NSObject, ObservableObject, ARSessionDelegate {
                 // C'EST SUREMENT ICI QUE CA CHIBRE
                 
                 //let image = UIImage(ciImage: CIImage(cvPixelBuffer: frame.capturedImage))
-                let image = UIImage(pixelBuffer: frame.capturedImage)!
+                let image = UIImage(pixelBuffer: frame.capturedImage)!.rotate(radians: Float.pi/2)!
                 //let image = UIImage(named: "crosswalk6")
                 do {
                     let prediction = try? analyzeImage(image: image)
