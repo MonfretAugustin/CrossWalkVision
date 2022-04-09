@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11EE5AAFE6B3D9F89A74B161 /* PositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE53C297EFFD0DF8C4CA71 /* PositionView.swift */; };
 		5B7D41A527FDE1BB007BB34C /* CrossWalkVisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D41A427FDE1BB007BB34C /* CrossWalkVisionApp.swift */; };
 		5B7D41A727FDE1BB007BB34C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D41A627FDE1BB007BB34C /* ContentView.swift */; };
 		5B7D41A927FDE1BE007BB34C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7D41A827FDE1BE007BB34C /* Assets.xcassets */; };
@@ -17,12 +18,10 @@
 		5B7D41B927FE2359007BB34C /* AREngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D41B827FE2359007BB34C /* AREngine.swift */; };
 		5B7D41BB27FE2491007BB34C /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D41BA27FE2491007BB34C /* SessionManager.swift */; };
 		5B7D41BD27FE26D4007BB34C /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7D41BC27FE26D4007BB34C /* ARViewContainer.swift */; };
-		5BA0F7A627FF03F000302AE5 /* CoreMLHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0F7A527FF03F000302AE5 /* CoreMLHelpers.swift */; };
-		5BA0F7AA27FF091200302AE5 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0F7A927FF091200302AE5 /* CameraController.swift */; };
-		5BA0F7AC27FF09DB00302AE5 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0F7AB27FF09DB00302AE5 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11EE53C297EFFD0DF8C4CA71 /* PositionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionView.swift; sourceTree = "<group>"; };
 		5B7D41A127FDE1BB007BB34C /* CrossWalkVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossWalkVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7D41A427FDE1BB007BB34C /* CrossWalkVisionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossWalkVisionApp.swift; sourceTree = "<group>"; };
 		5B7D41A627FDE1BB007BB34C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,9 +33,6 @@
 		5B7D41B827FE2359007BB34C /* AREngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AREngine.swift; sourceTree = "<group>"; };
 		5B7D41BA27FE2491007BB34C /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		5B7D41BC27FE26D4007BB34C /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
-		5BA0F7A527FF03F000302AE5 /* CoreMLHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLHelpers.swift; sourceTree = "<group>"; };
-		5BA0F7A927FF091200302AE5 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
-		5BA0F7AB27FF09DB00302AE5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +65,6 @@
 		5B7D41A327FDE1BB007BB34C /* CrossWalkVision */ = {
 			isa = PBXGroup;
 			children = (
-				5BA0F7AB27FF09DB00302AE5 /* CameraView.swift */,
-				5BA0F7A927FF091200302AE5 /* CameraController.swift */,
-				5BA0F7A527FF03F000302AE5 /* CoreMLHelpers.swift */,
 				5B7D41BC27FE26D4007BB34C /* ARViewContainer.swift */,
 				5B7D41BA27FE2491007BB34C /* SessionManager.swift */,
 				5B7D41B827FE2359007BB34C /* AREngine.swift */,
@@ -82,6 +75,7 @@
 				5B7D41AA27FDE1BE007BB34C /* Preview Content */,
 				5B7D41B427FDE269007BB34C /* PredictCrossWalkPosition.swift */,
 				5B7D41B627FDE58A007BB34C /* Extensions.swift */,
+				11EE53C297EFFD0DF8C4CA71 /* PositionView.swift */,
 			);
 			path = CrossWalkVision;
 			sourceTree = "<group>";
@@ -166,15 +160,13 @@
 			files = (
 				5B7D41B727FDE58A007BB34C /* Extensions.swift in Sources */,
 				5B7D41BD27FE26D4007BB34C /* ARViewContainer.swift in Sources */,
-				5BA0F7A627FF03F000302AE5 /* CoreMLHelpers.swift in Sources */,
 				5B7D41B327FDE1E7007BB34C /* CrosswalkVisionModel.mlmodel in Sources */,
-				5BA0F7AA27FF091200302AE5 /* CameraController.swift in Sources */,
 				5B7D41B927FE2359007BB34C /* AREngine.swift in Sources */,
 				5B7D41A727FDE1BB007BB34C /* ContentView.swift in Sources */,
-				5BA0F7AC27FF09DB00302AE5 /* CameraView.swift in Sources */,
 				5B7D41B527FDE269007BB34C /* PredictCrossWalkPosition.swift in Sources */,
 				5B7D41A527FDE1BB007BB34C /* CrossWalkVisionApp.swift in Sources */,
 				5B7D41BB27FE2491007BB34C /* SessionManager.swift in Sources */,
+				11EE5AAFE6B3D9F89A74B161 /* PositionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
